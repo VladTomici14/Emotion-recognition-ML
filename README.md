@@ -21,14 +21,14 @@ For the model training, I used the VGG16 CNN architecture. Most unique thing abo
 This is how tha architecture really looks like with all the layers:
 ![architecture of the model](models/architecture.png)
 
-###Training
+### <ins>Training</ins>
 
 The training of this model can be done by typing this command: 
 ```shell script
 python train_vgg16.py
 ```
 
-####_About the database_
+#### _About the database_
 I have used the [FER-2013]("https://www.kaggle.com/datasets/msambare/fer2013") database. The data consists of 48x48 pixel grayscaled images of faces. The faces have been automatically registered so that the ace is more or less centred and occupies about the same amount of space in each image.
 
 The database was built to categorize faces based on the emotion shown in the facial expression into one of the seven categories :
@@ -44,7 +44,7 @@ The database was built to categorize faces based on the emotion shown in the fac
 
 The training set consists of 28,709 examples and the public test set consists of 3,589 examples.
 
-####_Callbacks_
+#### _Callbacks_
 A callback is a set of functions to be applied at given stages of the training procedure. You can use callbacks to get a view on internal states and statistics of the model during training.
 
 The callbacks that I have used can be seen on line 90, in [train_vgg16.py](train_vgg16.py) file. Those are : 
@@ -52,7 +52,7 @@ The callbacks that I have used can be seen on line 90, in [train_vgg16.py](train
 - <ins>[__ModelCheckpoint__](https://keras.io/api/callbacks/model_checkpoint/)</ins> - This callback saves the model after every epoch.
 - <ins>[__EarlyStopping__](https://keras.io/api/callbacks/early_stopping/)</ins> - One way to avoid overfitting is to terminate the process early. The EarlyStoppingfunction has various metrics/arguments that you can modify to set up when the training process should stop.
 
-####_Metrics_
+#### _Metrics_
 Evaluating the model was essential to understand where I could improve. Most of the time, we use classification accuracy to measure the performance of our model, however it is not enough to truly judge our model.
 
 The metrics that I have used were: 
@@ -61,10 +61,7 @@ The metrics that I have used were:
 - <ins>[__Recall__](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/Recall)</ins> - Computes the recall of the predictions with respect to the labels.
 - <ins>[__AUC__](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/AUC)</ins> - Approximates the AUC (Area under the curve) of the ROC or PR curves.
 
-
-
-
-####_Comparasions_
+#### _Comparasions_
 
 During the development of this project, I have tried to train more models, and always aimed for better results. 
 
@@ -77,11 +74,11 @@ Those details can be found in the [charts.py](utils/charts.py) file. In this fil
 A chart looks something like this: 
 ![vgg16__603.png](models/vgg16__603.png)
 
-####_Final results_
+#### _Final results_
 
 The best model that I had been able to train, was [face_recog_vgg_856.hdf5](models/face_recog_vgg_856.hdf5). It has an accuracy of 85,6%. Unfortunately, I did not create the method to save details about the training when I have trained this model.
 
-###Detection on real time video
+### <ins>Detection on real time video</ins>
 This file will do detection on the video feed from the webcam of a laptop or an external camera.
 
 __In case I want to use a webcam, I will have to change the port on the [real_time_video.py](real_time_video.py), line 104. See the [detect-webcams.py](utils/detect-webcam.py) file for more details.__
@@ -100,12 +97,10 @@ python real_time_video.py
 
 Result: 
 
-###Detection on pictures
+### <ins>Detection on pictures</ins>
 This file will do the recognition on a given picture.
 
 It is the exactly same process that we have done for each frame in the [real_time_video.py](real_time_video.py).
-
-
 
 We can run this command to see how this file works:
 ```shell script
@@ -139,7 +134,7 @@ If we will run this command, it will print what we parsed through the command li
 python argparse_example.py --name John
 ```
 
-###Coding
+### <ins>Coding</ins>
 All the code was written in the Python 3.6 programming language. All the libraries that I have used are in the [requirements.md](requirements.md) file, alongside with all of their versions.
 
 __As a disclaimer, the only accepted versions for TensorFlow are those that start from 2.6.0 and above. Rest of the versions do not really matter.__
