@@ -6,8 +6,6 @@ import argparse
 import imutils
 import cv2
 
-# TODO: write the documentation of the entire project
-# TODO: explain the concept of argparsing
 # TODO: prepare the installs for her
 
 # ---------- argparsing arguments --------
