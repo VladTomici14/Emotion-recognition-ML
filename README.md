@@ -75,9 +75,11 @@ Those details can be found in the [charts.py](utils/charts.py) file. In this fil
 - ```trainValidationPlot()``` - Creates a chart that compares the training and the validation using our predefined metrics.
 
 A chart looks something like this: 
-
+![vgg16__603.png](models/vgg16__603.png)
 
 ####_Final results_
+
+The best model that I had been able to train, was [face_recog_vgg_856.hdf5](models/face_recog_vgg_856.hdf5). It has an accuracy of 85,6%. Unfortunately, I did not create the method to save details about the training when I have trained this model.
 
 ###<ins>Detection on real time video</ins>
 This file will do detection on the video feed from the webcam of a laptop or an external camera.
