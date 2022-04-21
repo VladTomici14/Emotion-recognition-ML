@@ -9,8 +9,6 @@ import tensorflow as tf
 import time
 
 
-# TODO: write in the documentation about the metrics and callbacks
-
 def main():
     startTime = time.time()
 
@@ -89,12 +87,13 @@ def main():
                   metrics=METRICS)
 
     # ----------- fitting the model -------
+    callbacks = [lr_reduce, model_checkpoint, early_stopping]
     history = model.fit(training_set,
                         validation_data=validation_set,
                         epochs=1,
                         steps_per_epoch=3,
                         verbose=1,
-                        callbacks=[lr_reduce, model_checkpoint, early_stopping])
+                        callbacks=callbacks)
 
     # ----- writing the log files ------
     finalAccuracy = int(float(history.history["accuracy"][0]) * 1000)
