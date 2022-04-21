@@ -1,38 +1,43 @@
 # All the packages that are needed to be installed
 
-All the installs will be done in the Anaconda PowerShell.
+All the installs will be done in the Anaconda PowerShell or in the Linux terminal.
 
-### OpenCV
-```python
-$ pip install opencv-python
+### OpenCV (4.5.3)
+```shell script
+pip install opencv-python
 ```
 
-### Tensorflow
-```python 
-$ pip install tensorflow
+### Tensorflow (2.6.0)
+```shell script
+pip install tensorflow
 ```
 
-### Pandas
-```python
-$ pip install pandas
+### Pandas (1.1.5)
+```shell script
+pip install pandas
 ```
 
-### Matplotlib
-```python
-$ pip install matplotlib
+### Matplotlib (3.2.2)
+```shell script
+pip install matplotlib
 ```
 
-### NumPy
-```python
-$ pip install numpy
+### NumPy (1.19.5)
+```shell script
+pip install numpy
 ```
 
-### Scikit-learn
-```python
+### Scikit-learn (0.23.1)
+```shell script
 pip install scikit-learn
 ```
 
-### Pillow
-```python
-$ pip install Pillow
+### Pillow (8.3.2)
+```shell script
+pip install Pillow
+```
+
+### Argparse (1.1)
+```shell script
+pip install argparse
 ```
