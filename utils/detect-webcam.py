@@ -1,5 +1,3 @@
-# TODO: write the documentation here
-
 import cv2
 
 # FIXME: when a camera is detected, it stops the loop
