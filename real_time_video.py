@@ -6,10 +6,6 @@ import imutils
 import time
 import cv2
 
-# TODO: prepare a we transfer folder with the database, other models
-# TODO: delete the __pycache__ and .idea directories
-# TODO: compare graphs between long and short architecture
-
 # ---- loading the models -----
 detection_model_path = "models/haarcascade_files/haarcascade_frontalface_default.xml"
 emotion_model_path = "models/face_recog_vgg_856.hdf5"
