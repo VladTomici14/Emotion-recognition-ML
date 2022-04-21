@@ -21,7 +21,7 @@ For the model training, I used the VGG16 CNN architecture. Most unique thing abo
 This is how tha architecture really looks like with all the layers:
 ![architecture of the model](models/architecture.png)
 
-###<ins>Training</ins>
+###Training
 
 The training of this model can be done by typing this command: 
 ```shell script
@@ -81,7 +81,7 @@ A chart looks something like this:
 
 The best model that I had been able to train, was [face_recog_vgg_856.hdf5](models/face_recog_vgg_856.hdf5). It has an accuracy of 85,6%. Unfortunately, I did not create the method to save details about the training when I have trained this model.
 
-###<ins>Detection on real time video</ins>
+###Detection on real time video
 This file will do detection on the video feed from the webcam of a laptop or an external camera.
 
 __In case I want to use a webcam, I will have to change the port on the [real_time_video.py](real_time_video.py), line 104. See the [detect-webcams.py](utils/detect-webcam.py) file for more details.__
@@ -100,7 +100,7 @@ python real_time_video.py
 
 Result: 
 
-###<ins>Detection on pictures</ins>
+###Detection on pictures
 This file will do the recognition on a given picture.
 
 It is the exactly same process that we have done for each frame in the [real_time_video.py](real_time_video.py).
@@ -139,7 +139,7 @@ If we will run this command, it will print what we parsed through the command li
 python argparse_example.py --name John
 ```
 
-###<ins>Coding</ins>
+###Coding
 All the code was written in the Python 3.6 programming language. All the libraries that I have used are in the [requirements.md](requirements.md) file, alongside with all of their versions.
 
 __As a disclaimer, the only accepted versions for TensorFlow are those that start from 2.6.0 and above. Rest of the versions do not really matter.__
