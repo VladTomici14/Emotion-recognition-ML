@@ -6,8 +6,6 @@ import argparse
 import imutils
 import cv2
 
-# TODO: prepare the installs for her
-
 # ---------- argparsing arguments --------
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="path to the image")
