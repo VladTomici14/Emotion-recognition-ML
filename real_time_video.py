@@ -6,9 +6,8 @@ import imutils
 import time
 import cv2
 
-# TODO: add code on github
-# TODO: add more comments and eliminate useless stuff
-# TODO: add the model architecture in the folder (the CLI one)
+# TODO: prepare a we transfer folder with the database, other models
+# TODO: delete the __pycache__ and .idea directories
 # TODO: compare graphs between long and short architecture
 
 # ---- loading the models -----
@@ -101,7 +100,7 @@ def main():
     previousTime = 0
     timeNow = 0
 
-    camera = cv2.VideoCapture(2)
+    camera = cv2.VideoCapture(0)
     while True:
         # ----- reading frame by frame the video from the camera ----
         ret, frame = camera.read()
