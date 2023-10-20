@@ -1,4 +1,4 @@
-# Emotion-recognition
+# Emotion recognition
 Emotion recognition using the transfer learning method.
 
 ### <ins>Models</ins>
